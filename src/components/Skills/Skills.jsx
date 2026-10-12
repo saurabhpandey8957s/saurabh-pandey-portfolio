@@ -198,7 +198,7 @@ function Skills() {
   return (
     <section className="skills-section" id="skills">
       <div className="skills-container">
-        <h2 className="skills-title">Technical Arsenal</h2>
+        <h2 className="skills-title">Technical Skills</h2>
 
         <p className="skills-subtitle">
           Technologies and tools I use to build modern, scalable, secure, and
