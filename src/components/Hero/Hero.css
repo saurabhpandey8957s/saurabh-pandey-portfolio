@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  padding: 70px 10%;
+
+  background: #151e3f;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+
+  scroll-margin-top: 80px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #8a5cff;
+}
+
+/* INTRO TEXT */
+
+.intro {
+  max-width: 700px;
+  margin-bottom: 25px;
+
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* DESCRIPTION */
+
+.desc {
+  max-width: 700px;
+  margin-bottom: 35px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #b8b8c7;
+}
+
+/* ================= RESUME BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 15px 25px;
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* BUTTON ICONS */
+
+.btn-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+/* DOWNLOAD RESUME */
+
+.resume-btn {
+  background: linear-gradient(135deg, #8a5cff, #6d28d9);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(138, 92, 255, 0.4);
+}
+
+/* VIEW RESUME */
+
+.contact-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #626985;
+}
+
+.contact-btn:hover {
+  border-color: #8a5cff;
+  color: #b69aff;
+  background: rgba(138, 92, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.hero-buttons .btn:focus-visible,
+.social-links a:focus-visible {
+  outline: 2px solid #b69aff;
+  outline-offset: 5px;
+}
+
+/* ================= SOCIAL LINKS ================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: #d1d5db;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* SOCIAL ICONS */
+
+.social-icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+
+  transition: transform 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #a98aff;
+  transform: translateY(-2px);
+}
+
+.social-links a:hover .social-icon {
+  transform: scale(1.12);
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.hero-right {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.hero-right img {
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  height: 490px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.hero-right img:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 35px 65px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(139, 92, 246, 0.18);
+}
+
+/* ================= CODE CARD ================= */
+
+.code-card {
+  position: absolute;
+  bottom: -20px;
+  right: 25px;
+
+  padding: 16px 22px;
+
+  background: #111827;
+  color: #f9fafb;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  white-space: nowrap;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    gap: 45px;
+    padding: 60px 5%;
+  }
+
+  .hero-left h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    padding: 13px 18px;
+    font-size: 15px;
+  }
+
+  .hero-right img {
+    max-width: 320px;
+    height: 420px;
+  }
+
+  .code-card {
+    right: 0;
+    font-size: 12px;
+    padding: 14px 16px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 45px;
+
+    padding: 50px 6%;
+  }
+
+  .hero-left {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-right {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.7rem;
+  }
+
+  .intro {
+    max-width: 600px;
+    margin: 0 auto 22px;
+    font-size: 1.1rem;
+  }
+
+  .desc {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .hero-right img {
+    max-width: 280px;
+    height: 360px;
+    border-radius: 18px;
+  }
+
+  .hero-right img:hover {
+    transform: translateY(-5px) scale(1.015);
+  }
+
+  .code-card {
+    right: 50%;
+    bottom: -18px;
+    transform: translateX(50%);
+
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+  .hero {
+    gap: 40px;
+    padding: 40px 20px 55px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .desc {
+    font-size: 0.93rem;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    min-height: 52px;
+    padding: 13px 16px;
+    font-size: 15px;
+  }
+
+  .social-links {
+    gap: 18px;
+  }
+
+  .social-links a {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .social-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .hero-right img {
+    max-width: 240px;
+    height: 300px;
+    border-radius: 14px;
+  }
+
+  .code-card {
+    bottom: -18px;
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-buttons .btn,
+  .social-links a,
+  .social-icon,
+  .hero-right img {
+    transition: none;
+  }
+
+  .hero-buttons .btn:hover,
+  .social-links a:hover,
+  .social-links a:hover .social-icon,
+  .hero-right img:hover {
+    transform: none;
+  }
+}
