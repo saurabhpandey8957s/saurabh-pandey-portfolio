@@ -77,7 +77,7 @@ import "./Projects.css";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import project1 from "../../assets/Agrisure.png";
+import project1 from "../../assets/AgriSure.png";
 import project2 from "../../assets/CampusConnect.png";
 
 const projects = [
