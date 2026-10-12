@@ -199,7 +199,149 @@
 // export default ProjectDetails;
 
 
-import { useParams, Link } from "react-router-dom";
+// import { useParams, Link } from "react-router-dom";
+// import { useEffect } from "react";
+// import { HashLink } from "react-router-hash-link";
+// import {
+//   FaArrowLeft,
+//   FaGithub,
+//   FaExternalLinkAlt,
+//   FaCheckCircle,
+// } from "react-icons/fa";
+// import "./ProjectDetails.css";
+
+// import project1 from "../assets/AgriSure.png";
+
+// const projectData = {
+//   agrisure: {
+//     title: "AgriSure - Smart Crop Insurance & Claim Management System",
+
+//     image: project1,
+
+//     description:
+//       "AgriSure is a full-stack web application designed to digitize crop insurance processes. It supports farmer registration, crop details, insurance applications, document uploads, and claim tracking. The system uses JWT-based authentication and role-based access control. A separate .NET payment microservice integrates with Razorpay in test mode for premium payments.",
+
+//     tech: [
+//       "React.js",
+//       "Java",
+//       "Spring Boot",
+//       "Spring Data JPA",
+//       "Hibernate",
+//       "MySQL",
+//       "REST APIs",
+//       "JWT",
+//       "Role-Based Access Control",
+//       ".NET Microservice",
+//       "Razorpay",
+//     ],
+
+//     features: [
+//       "Farmer Registration and Profile Management",
+//       "Crop Details and Insurance Application Management",
+//       "Document Upload and Management",
+//       "Insurance Claim Tracking",
+//       "JWT-Based Authentication",
+//       "Role-Based Access Control",
+//       "Separate .NET Payment Microservice",
+//       "Razorpay Test-Mode Payment Integration",
+//       "REST API Integration",
+//     ],
+
+//     frontend: "https://github.com/saurabhpandey8957s/AgriSure",
+
+//     backend: "https://github.com/saurabhpandey8957s/AgriSure",
+
+//     live: "",
+//   },
+// };
+
+// function ProjectDetails() {
+//   const { id } = useParams();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [id]);
+
+//   const project = projectData[id];
+
+//   if (!project) {
+//     return <h1>Project Not Found</h1>;
+//   }
+
+//   return (
+//     <div className="details-page">
+//       <div className="details-container">
+//         <HashLink smooth to="/#projects" className="back-btn">
+//           <FaArrowLeft />
+//           Back to Projects
+//         </HashLink>
+
+//         <h1>{project.title}</h1>
+//         <br></br>
+
+//         <img
+//           src={project.image}
+//           alt={project.title}
+//           className="project-banner"
+//         />
+
+//         <div className="project-info">
+//           <p>{project.description}</p>
+
+//           <h2>Tech Stack</h2>
+
+//           <div className="tech-list">
+//             {project.tech.map((tech, index) => (
+//               <span key={index}>{tech}</span>
+//             ))}
+//           </div>
+
+//           <h2>Key Features</h2>
+
+//           <div className="feature-grid">
+//             {project.features.map((feature, index) => (
+//               <div className="feature-card" key={index}>
+//                 <FaCheckCircle />
+//                 <span>{feature}</span>
+//               </div>
+//             ))}
+//           </div>
+
+//           <div className="buttons">
+//             {project.frontend && (
+//               <a
+//                 href={project.frontend}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
+//                 <FaGithub />
+//                 GitHub Repository
+//               </a>
+//             )}
+
+//             {project.live && (
+//               <a
+//                 href={project.live}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
+//                 <FaExternalLinkAlt />
+//                 Live Demo
+//               </a>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ProjectDetails;
+
+
+
+
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import {
@@ -210,7 +352,8 @@ import {
 } from "react-icons/fa";
 import "./ProjectDetails.css";
 
-import project1 from "../assets/project1.png";
+import project1 from "../assets/AgriSure.png";
+import project2 from "../assets/CampusConnect.png";
 
 const projectData = {
   agrisure: {
@@ -247,9 +390,36 @@ const projectData = {
       "REST API Integration",
     ],
 
-    frontend: "https://github.com/saurabhpandey8957s/AgriSure",
+    github: "https://github.com/saurabhpandey8957s/AgriSure",
 
-    backend: "https://github.com/saurabhpandey8957s/AgriSure",
+    live: "",
+  },
+
+  campusconnect: {
+    title: "CampusConnect - College Management System",
+
+    image: project2,
+
+    description:
+      "CampusConnect is a web application designed to provide a centralized platform for campus-related information and services. Update this description to reflect the actual features and functionality implemented in your project.",
+
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+
+    features: [
+      "Centralized Campus Information",
+      "Implemented separate dashboards for Admin, Faculty, and Students with role-based access control",
+      "User-Friendly Interface",
+      "Developed student management, faculty management, attendance tracking, and marks management modules",
+      "Responsive Web Design",
+      "Implemented JWT authentication and REST APIs for secure frontend-backend communication",
+    ],
+
+    github: "https://github.com/saurabhpandey8957s/CampusConnect",
 
     live: "",
   },
@@ -265,7 +435,17 @@ function ProjectDetails() {
   const project = projectData[id];
 
   if (!project) {
-    return <h1>Project Not Found</h1>;
+    return (
+      <div className="details-page">
+        <div className="details-container">
+          <h1>Project Not Found</h1>
+          <HashLink smooth to="/#projects" className="back-btn">
+            <FaArrowLeft />
+            Back to Projects
+          </HashLink>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -277,7 +457,8 @@ function ProjectDetails() {
         </HashLink>
 
         <h1>{project.title}</h1>
-        <br></br>
+
+        <br />
 
         <img
           src={project.image}
@@ -291,16 +472,16 @@ function ProjectDetails() {
           <h2>Tech Stack</h2>
 
           <div className="tech-list">
-            {project.tech.map((tech, index) => (
-              <span key={index}>{tech}</span>
+            {project.tech.map((tech) => (
+              <span key={tech}>{tech}</span>
             ))}
           </div>
 
           <h2>Key Features</h2>
 
           <div className="feature-grid">
-            {project.features.map((feature, index) => (
-              <div className="feature-card" key={index}>
+            {project.features.map((feature) => (
+              <div className="feature-card" key={feature}>
                 <FaCheckCircle />
                 <span>{feature}</span>
               </div>
@@ -308,9 +489,9 @@ function ProjectDetails() {
           </div>
 
           <div className="buttons">
-            {project.frontend && (
+            {project.github && (
               <a
-                href={project.frontend}
+                href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
